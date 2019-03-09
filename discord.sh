@@ -1,4 +1,5 @@
 echo 'installing discord'
+cd
 git clone https://aur.archlinux.org/libc++.git
 cd libc++
 gpg --recv-keys 474E22316ABF4785A88C6E8EA2C794A986419D8A
