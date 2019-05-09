@@ -1,3 +1,4 @@
+#
 # ~/.bashrc
 #
 
@@ -11,6 +12,9 @@ alias ls="ls -hN --color=auto --group-directories-first" \
       mkd="mkdir -pv"
 #PS1='[\u@\h \W]\$ '
 PS1='\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\ \n  → '
+
+export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
+
 alias owofetch='neofetch --ascii ~/.config/neofetch/owofetch'
 alias yt="youtube-dl -i -o '%(title)s.%(ext)s'" \
       yta="yt -x -f bestaudio/best" \
