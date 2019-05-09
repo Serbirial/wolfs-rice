@@ -1,2 +1,1 @@
-# wolfs-rice
-my linux (ubuntu) rice
+Have fun trying to get it working
