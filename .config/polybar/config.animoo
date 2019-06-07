@@ -12,6 +12,37 @@ bordercolor = #00000000
 accent = ${xrdb:color6:#e60053}
 
 
+[bar/toplaptop]
+fixed-center = true
+
+border-bottom-size = 2
+border-bottom-color = ${colors.bordercolor}
+
+padding-left = 0
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 2
+background = ${colors.background}
+foreground = ${colors.foreground}
+width = 100%
+height = 24
+
+font-0 = NotoSans-Regular:size=8;-1
+
+
+font-1 = MaterialIcons:size=10;0
+font-2 = Termsynu:size=8:antialias=false;-2
+font-3 = FontAwesome:size=10;0
+
+modules-left = i3 mpd
+modules-center = xwindow date 
+modules-right = wifi battery volume memory cpu
+
+tray-position = right
+tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
 [bar/top]
 fixed-center = true
 
@@ -54,6 +85,66 @@ label-layout =  %layout%
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.alert}
+
+[module/wifi]
+type = internal/network
+interface = wlp5s0
+
+format-connected = <label-connected>
+label-connected =  %essid% (%downspeed:8%)
+
+format-disconnected = <label-disconnected>
+label-disconnected =  disconnected
+
+interval = 3.0
+;udspeed-minwidth = 0
+
+format-connected-prefix-foreground = #666
+format-connected-prefix-offset = -6
+
+;format-disconnected = <label-disconnected>
+;format-disconnected-prefix = " "
+;format-disconnected-prefix-foreground = #666
+;label-disconnected = not connected
+;label-disconnected-foreground = #999
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = #666
+
+[module/battery]
+type = internal/battery
+full-at = 98
+time-format = %H:%M:%S
+
+format-charging = <animation-charging> <label-charging>
+label-charging = %percentage%% %time% Charging
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%% %time% Discharging
+
+format-full = <label-full>
+format-full-prefix = " "
+format-full-prefix-foreground = #ff
+
+ramp-capacity-0 = |------
+ramp-capacity-1 = -|-----
+ramp-capacity-2 = --|----
+ramp-capacity-3 = ---|---
+ramp-capacity-4 = ----|--
+ramp-capacity-5 = -----|-
+ramp-capacity-6 = ------|
+ramp-capacity-foreground = #ff
+
+animation-charging-0 = |
+animation-charging-1 = /
+animation-charging-2 = -
+animation-charging-3 = \
+animation-charging-foreground = #ff
+animation-charging-framerate = 700
 
 [module/i3]
 type = internal/i3
