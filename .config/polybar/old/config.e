@@ -1,15 +1,14 @@
-
 [colors]
 ; Transparent
 background = #80000000
-foreground = ${xrdb:color8:#222}
+foreground = ${xrdb:color6:#222}
 foreground-alt = ${xrdb:color7:#222}
 alert = ${xrdb:color2:#222}
 ;background = #00000000
 ;foreground = #eee
-linecolor = ${xrdb:color1:#222}
+linecolor = #fba922
 bordercolor = #00000000
-accent = ${xrdb:color6:#e60053}
+accent = #e60053
 
 
 [bar/toplaptop]
@@ -72,19 +71,6 @@ tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:60:...%
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-label-layout =  %layout%
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.alert}
 
 [module/wifi]
 type = internal/network
@@ -145,6 +131,20 @@ animation-charging-2 = -
 animation-charging-3 = \
 animation-charging-foreground = #ff
 animation-charging-framerate = 700
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout =  %layout%
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.alert}
 
 [module/i3]
 type = internal/i3
@@ -309,34 +309,34 @@ label-empty-padding = 1
 
 [module/cpu]
 type = internal/cpu
-interval = 1
+interval = 0.7
 format = <label> <ramp-coreload>
 label = CPU
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
-ramp-coreload-0-foreground = ${xrdb:color8}
+ramp-coreload-0-foreground = #B7C1E0
 ramp-coreload-1 = ▂
 ramp-coreload-1-font = 2
-ramp-coreload-1-foreground = ${xrdb:color7}
+ramp-coreload-1-foreground = #E5D4EC
 ramp-coreload-2 = ▃
 ramp-coreload-2-font = 2
-ramp-coreload-2-foreground = ${xrdb:color6}
+ramp-coreload-2-foreground = #E5D4EC
 ramp-coreload-3 = ▄
 ramp-coreload-3-font = 2
-ramp-coreload-3-foreground = ${xrdb:color5}
+ramp-coreload-3-foreground = #D7C7DE
 ramp-coreload-4 = ▅
 ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = ${xrdb:color4}
+ramp-coreload-4-foreground = #D8B5D9
 ramp-coreload-5 = ▆
 ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = ${xrdb:color3}
+ramp-coreload-5-foreground = #C77B9B
 ramp-coreload-6 = ▇
 ramp-coreload-6-font = 2
-ramp-coreload-6-foreground = ${xrdb:color2}
+ramp-coreload-6-foreground = #C77B9B
 ramp-coreload-7 = █
 ramp-coreload-7-font = 2
-ramp-coreload-7-foreground = ${xrdb:color1}
+ramp-coreload-7-foreground = #533943
 
 [module/date]
 type = internal/date
@@ -349,11 +349,11 @@ format = <label> <bar-used>
 label = RAM
 
 bar-used-width = 30
-bar-used-foreground-0 = ${xrdb:color6}
-bar-used-foreground-1 = ${xrdb:color5}
-bar-used-foreground-2 = ${xrdb:color4}
-bar-used-foreground-3 = ${xrdb:color3}
-bar-used-foreground-4 = ${xrdb:color1}
+bar-used-foreground-0 = #E5D4EC
+bar-used-foreground-1 = #D7C7DE
+bar-used-foreground-2 = #D8B5D9
+bar-used-foreground-3 = #C77B9B
+bar-used-foreground-4 = #533943
 bar-used-indicator = |
 bar-used-indicator-font = 6
 bar-used-indicator-foreground = #ff
